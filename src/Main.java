@@ -1,10 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+    author autor1= new author("Питер","Хёгг");
+     book book1= new book("Твоими глазами",2011,autor1);
+    author autor2= new author("Николай","Лесков");
+     book book2= new book("Железная воля",2007,autor2);
+    author autor3= new author("Венедикт","Ерофеев");
+     book book3= new book("Записные книжки",2007,autor3);
+        book2.setYear(2022);
+        System.out.println("Название книги - " + book2.getName() + ", автор " + book2.getAuthor().getName()+" "+ book2.getAuthor().getSurName()+", год издания "+book2.getYear());
+        System.out.println("Название книги - " + book3.getName() + ", автор " + book3.getAuthor().getName()+" "+ book3.getAuthor().getSurName()+", год издания "+book3.getYear());
+        System.out.println("Название книги - " + book1.getName() + ", автор " + book1.getAuthor().getName()+" "+ book1.getAuthor().getSurName()+", год издания "+book1.getYear());
     }
 
-   /* 1. Необходимо создать класс Book, который содержит в себе данные об имени, авторе и оде публикации.
-   Типы полей должны быть String, Author (который мы создадим  в п. 2) и int.
+
+   /* 1. Необходимо создать класс Book, который содержит в себе данные об имени, авторе и годе публикации.
+   Типы полей должны быть String, Author (который мы создадим в п. 2) и int.
       2. Необходимо создать класс Author, который содержит в себе данные об имени и фамилии автора.
       3. Написать конструкторы для обоих классов, заполняющие все поля.
       4. Создать геттеры для всех полей автора и всех полей книги.
